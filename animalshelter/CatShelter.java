@@ -2,6 +2,7 @@ package animalshelter;
 
 /**
  * Created by Niklas on 2016-02-07.
+ * Redundant!!!!
  */
 public class CatShelter extends AnimalShelter {
 

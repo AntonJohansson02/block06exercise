@@ -14,7 +14,12 @@ package likeinhaskell;
 //  .
 //  Hint: To solve this task, you need to use type parameters on both the
 //  interface itself, *and* on one of its methods.
-public interface Function {
+public interface Function <T,R> {
+    public R apply(T obj);
+    public <H> Function<R,H> compose(Function<T,R> func1);
+
+   
+
     // public ... apply(...);
     // TODO task 5: For even more challenge, really tricky!
     //  Give the compose() function a default implementation.

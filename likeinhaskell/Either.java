@@ -23,8 +23,22 @@ package likeinhaskell;
 //  Hint: Where Haskell creates a data type by listing constructors, an
 //     OO language like Java would use subclassing.
 //  Hint: The most elegant solution uses inner classes (look them up).
-public class Either {
-    // public boolean isLeft(){...}
-    // public boolean isRight(){...}
-    // public T either((L->T)->(R->T)->T) func){...}
+public class Either<L,R> {
+    private L left;
+    private R right;
+    private boolean isLeft;
+
+    public boolean isLeft(){
+        return isLeft;
+    }
+    public boolean isRight(){
+        return !isLeft;}
+    
+    public T either((L->T)->(R->T)->T) func){
+    if(isLeft){
+        return func.apply(left);
+    }
+    else{
+        return func.apply(right);
+    }
 }
